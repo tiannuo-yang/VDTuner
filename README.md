@@ -16,9 +16,9 @@ VDTuner is tested on a server configured with CentOS 7.9.2009 (Linux 5.5.0) and 
 3. Download dataset.  
    Take [GloVe](http://ann-benchmarks.com/glove-100-angular.hdf5) as an example, download it to `vector-db-benchmark-master/datasets/glove-100-angular/glove-100-angular.hdf5`.
 4. Specify the similarity search requests.  
-   Modify the file `vector-db-benchmark-master/experiments/configurations/milvus-single-node.json` as follow:
+   Modify the file `vector-db-benchmark-master/experiments/configurations/milvus-single-node.json` to a defualt index configuration as follow. The parameter `parallel` can be modified according to your server specifications.  
    ```json
-      [
+   [
      {
        "name": "milvus-p10",
        "engine": "milvus",
@@ -27,18 +27,13 @@ VDTuner is tested on a server configured with CentOS 7.9.2009 (Linux 5.5.0) and 
        "search_params": [
          {
            "parallel": 10,
-           "params": {
-             "nprobe": 4425,
-             "reorder_k": 622
-           }
+           "params": {}
          }
        ],
        "upload_params": {
-         "parallel": 32,
-         "index_type": "SCANN",
-         "index_params": {
-           "nlist": 4973
-         }
+         "parallel": 10,
+         "index_type": "AUTOINDEX",
+         "index_params": {}
        }
      }
    ]
