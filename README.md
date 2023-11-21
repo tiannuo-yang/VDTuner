@@ -7,3 +7,6 @@ VDTuner is tested on a server configured with CentOS 7.9.2009 (Linux 5.5.0) and 
 2. Install benchmark [vector-db-benchmark](https://github.com/qdrant/vector-db-benchmark) from github source.
 3. Install Python 3.11 alone with the following packages:
    
+### Preparations
+1. Modify the defualt engine in benchmark.
+   
