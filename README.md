@@ -1,6 +1,7 @@
 <div  align="center">    
 <img src="./logo2.png" alt="VDTuner" width="60%">
 </div>
+
 ---
 
 <!-- # VDTuner: Towards High Search Speed and Recall Rate by Auto-Configuring Vector Data Management System -->
