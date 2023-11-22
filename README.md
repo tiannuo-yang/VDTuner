@@ -1,4 +1,6 @@
-![VDTuner](./logo2.png)
+<!--![VDTuner](./logo2.png)--!>
+<img src="./logo2.png" alt="VDTuner" width="80%">
+
 # VDTuner: Towards High Search Speed and Recall Rate by Auto-Configuring Vector Data Management System
 
 VDTuner is tested on a server configured with CentOS 7.9.2009 (Linux 5.5.0) and Python 3.11. The evaluated Vector Database Management System and benchamark is Mivlus (version 2.3.1) and vector-db-benchmark.
