@@ -48,5 +48,5 @@ VDTuner is tested on a server configured with CentOS 7.9.2009 (Linux 5.5.0) and 
    ```
 
 ## Contributors
-[Tiannuo Yang](https://github.com/tiannuo-yang) (yangtn@nbjl.nankai.edu.cn)  
-[Wangqi Peng](https://github.com/yanxiaoqi932) (pengwq@nbjl.nankai.edu.cn)
+[Tiannuo Yang](https://github.com/tiannuo-yang) <yangtn@nbjl.nankai.edu.cn>  
+[Wangqi Peng](https://github.com/yanxiaoqi932) <pengwq@nbjl.nankai.edu.cn>
