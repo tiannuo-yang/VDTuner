@@ -47,6 +47,37 @@ VDTuner is tested on a server configured with CentOS 7.9.2009 (Linux 5.5.0) and 
    ]
    ```
 
+- Specify your dataset and timeout limit. In file `auto-configure/vdtuner/utils.py` (line 117), assume we test dataset GloVe, with a maximum of 15 minutes for each workload replay:
+   ```python
+   result = sp.run(f'sudo timeout 900 {RUN_ENGINE_PATH} "" "" glove-100-angular', shell=True, stdout=sp.PIPE)
+   ```
+
+#### Specify your config file path.  
+- To run VDTuner, you need to specify the configuration file of tuning parameters and benchmark path. Here is an example.  
+  In file `auto-configure/configure.py`, line 4-9:
+  ```python
+   with open('/home/ytn/milvusTuning/auto-configure/index_param.json', 'r') as f:
+       INDEX_PARAM_DICT = json.load(f)
+   
+   CONF_PATH = r'/home/ytn/milvusTuning/vector-db-benchmark-master/experiments/configurations/milvus-single-node.json'
+   ORIGIN_PATH = r'/home/ytn/milvusTuning/vector-db-benchmark-master/engine/servers/milvus-single-node/milvus.yaml.backup'
+   ADJUST_PATH = r'/home/ytn/milvusTuning/vector-db-benchmark-master/engine/servers/milvus-single-node/milvus.yaml'
+  ```
+
+  In file `auto-configure/vdtuner/utils.py`, line 13-14:
+  ```python
+   KNOB_PATH = r'/home/ytn/milvusTuning/auto-configure/whole_param.json'
+   RUN_ENGINE_PATH = r'/home/ytn/milvusTuning/vector-db-benchmark-master/run_engine.sh'
+  ```
+
+## Run VDTuner
+### Start auto-tuning
+- Congratulations! You can run VDTuner to optimize your vector database now! Go to `auto-configure/vdtuner/` and run:
+  ```shell
+   python3.11 main_tuner.py
+  ```
+Note that this would take very long time (about 30000s for 200 iterations with dataset GloVe), because VDTuner iteratively performs workload replay and configuration recommendation. You can change the number of iterations as desired in `main_tuner.py`.
+
 ## Contributors
 [Tiannuo Yang](https://github.com/tiannuo-yang) <yangtn@nbjl.nankai.edu.cn>  
 [Wangqi Peng](https://github.com/yanxiaoqi932) <pengwq@nbjl.nankai.edu.cn>
