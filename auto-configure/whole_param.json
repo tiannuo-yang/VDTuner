@@ -1,0 +1,127 @@
+{
+    "index_type": {
+        "class": "type",
+        "type": "enum",
+        "default": "AUTOINDEX",
+        "enum_values": [
+            "FLAT",
+            "IVF_FLAT",
+            "IVF_SQ8",
+            "IVF_PQ",
+            "HNSW",
+            "SCANN",
+            "AUTOINDEX"
+        ]
+    },
+    "nlist": {
+        "class": "building",
+        "type": "integer",
+        "default": 128,
+        "min": 1,
+        "max": 10000
+    },
+    "nprobe": {
+        "class": "searching",
+        "type": "integer",
+        "default": 8,
+        "min": 1,
+        "max": 100
+    },
+    "m": {
+        "class": "building",
+        "type": "enum",
+        "default": 10,
+        "enum_values": [
+            1,
+            2,
+            4,
+            5,
+            10,
+            20,
+            25,
+            50,
+            100
+        ]
+    },
+    "nbits": {
+        "class": "building",
+        "type": "integer",
+        "default": 8,
+        "min": 1,
+        "max": 10
+    },
+    "M": {
+        "class": "building",
+        "type": "integer",
+        "default": 32,
+        "min": 4,
+        "max": 64
+    },
+    "efConstruction": {
+        "class": "building",
+        "type": "integer",
+        "default": 256,
+        "min": 8,
+        "max": 512
+    },
+    "ef": {
+        "class": "searching",
+        "type": "integer",
+        "default": 500,
+        "min": 100,
+        "max": 1000
+    },
+    "reorder_k": {
+        "class": "searching",
+        "type": "integer",
+        "default": 500,
+        "min": 100,
+        "max": 1000
+    },
+    "dataCoord*segment*maxSize": {
+        "type": "integer",
+        "default": 512,
+        "min": 100,
+        "max": 10000
+    },
+    "dataCoord*segment*sealProportion": {
+        "type": "integer",
+        "default": 23,
+        "min": 1,
+        "max": 99
+    },
+    "queryCoord*autoHandoff": {
+        "type": "enum",
+        "default": true,
+        "enum_values": [
+            true,
+            false
+        ]
+    },
+    "queryCoord*autoBalance": {
+        "type": "enum",
+        "default": true,
+        "enum_values": [
+            true,
+            false
+        ]
+    },
+    "common*gracefulTime": {
+        "type": "integer",
+        "default": 5000,
+        "min": 100,
+        "max": 100000
+    },
+    "dataNode*segment*insertBufSize": {
+        "type": "integer",
+        "default": 16777216,
+        "min": 1000,
+        "max": 10000000000
+    },
+    "rootCoord*minSegmentSizeToEnableIndex": {
+        "type": "integer",
+        "default": 1024,
+        "min": 100,
+        "max": 10000
+    }
+}
