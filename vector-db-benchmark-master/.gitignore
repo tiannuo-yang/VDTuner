@@ -1,0 +1,8 @@
+.idea/
+.pytest_cache/
+__pycache__
+*.pyc
+NOTES.md
+
+results/*
+tools/custom/data.json
