@@ -76,7 +76,7 @@ VDTuner is tested on a server configured with CentOS 7.9.2009 (Linux 5.5.0) and 
   ```shell
    python3.11 main_tuner.py
   ```
-Note that this would take very long time (about 30000s for 200 iterations with dataset GloVe), because VDTuner iteratively performs workload replay and configuration recommendation. You can change the number of iterations as desired in `main_tuner.py`.
+  Note that this would take very long time (about 30000s for 200 iterations with dataset GloVe), because VDTuner iteratively performs workload replay and configuration recommendation. You can change the number of iterations as desired in `main_tuner.py`.
 
 ## Contributors
 [Tiannuo Yang](https://github.com/tiannuo-yang) <yangtn@nbjl.nankai.edu.cn>  
