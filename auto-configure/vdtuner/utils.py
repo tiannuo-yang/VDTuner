@@ -114,7 +114,7 @@ class RealEnv:
             # print(f"Parameters changed to: {index_conf} {system_conf}")
 
             try:
-                result = sp.run(f'sudo timeout 900 {RUN_ENGINE_PATH} "" "" random-geo-radius-2048-angular-no-filters', shell=True, stdout=sp.PIPE)
+                result = sp.run(f'sudo timeout 900 {RUN_ENGINE_PATH} "" "" glove-100-angular', shell=True, stdout=sp.PIPE)
                 result = result.stdout.decode().split()
                 y1, y2 = float(result[-2]), float(result[-3]) 
                 # y1, y2 = 1698.4412378836437*(random.random()+0.5), 0.822103*(random.random()+0.5)
