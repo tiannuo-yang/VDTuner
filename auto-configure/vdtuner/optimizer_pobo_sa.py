@@ -229,7 +229,7 @@ class PollingBayesianOptimization:
     def step(self,):
         if len(self.remain_types) > 1:
             self.successive_abandon()
-        sp.run(f'echo {list(self.chosen_ref_whole)} {list(self.chosen_ref_k.values())}  {list(self.delta_hv.values())} {self.worst_type_record[-1]} {self.remain_types}>> 5_all.log', shell=True, stdout=sp.PIPE)
+        sp.run(f'echo {list(self.chosen_ref_whole)} {list(self.chosen_ref_k.values())}  {list(self.delta_hv.values())} {self.worst_type_record[-1]} {self.remain_types}>> pobo_record.log', shell=True, stdout=sp.PIPE)
 
         polling_k, new_x = self.rr_polling()
         new_y = self.env.get_state(new_x)
