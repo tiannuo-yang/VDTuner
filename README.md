@@ -77,7 +77,7 @@ VDTuner is tested on a server configured with CentOS 7.9.2009 (Linux 5.5.0) and 
    python3.11 main_tuner.py
   ```
   Note that this would take very long time (about 30000s for 200 iterations with dataset GloVe), because VDTuner iteratively performs workload replay and configuration recommendation. You can change the number of iterations as desired in `main_tuner.py`.
-- Results of sampled configurations and optimizer's internal information will be logged to `record.log` and `pobo_record.log` in real time. Here is an example output of in `record.log`:
+- Results of sampled configurations and optimizer's internal information will be logged to `record.log` and `pobo_record.log` in real time. Here is an example output in `record.log`:
   ```
    [1] 125 {index_type: FLAT, nlist: 128, nprobe: 10, m: 10, nbits: 8, M: 32, efConstruction: 256, ef: 500, reorder_k: 500} {dataCoord*segment*maxSize: 512, dataCoord*segment*sealProportion: 0.23, queryCoord*autoHandoff: True, queryCoord*autoBalance: True, common*gracefulTime: 5000, dataNode*segment*insertBufSize: 16777216, rootCoord*minSegmentSizeToEnableIndex: 1024} 230.5802223315391 0.9999830000000002 125
    [2] 214 {index_type: IVF_FLAT, nlist: 128, nprobe: 10, m: 10, nbits: 8, M: 32, efConstruction: 256, ef: 500, reorder_k: 500} {dataCoord*segment*maxSize: 512, dataCoord*segment*sealProportion: 0.23, queryCoord*autoHandoff: True, queryCoord*autoBalance: True, common*gracefulTime: 5000, dataNode*segment*insertBufSize: 16777216, rootCoord*minSegmentSizeToEnableIndex: 1024} 1086.9213657571365 0.8496440000000001 88
