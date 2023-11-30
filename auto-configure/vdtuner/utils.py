@@ -129,7 +129,7 @@ class RealEnv:
 
             self.t2 = time.time()
             print(f'[{self.sampled_times}] {int(self.t2-self.t1)} {y1} {y2} {y3}')
-            sp.run(f'echo [{self.sampled_times}] {int(self.t2-self.t1)} {index_conf} {system_conf} {y1} {y2} {y3} >> 5_all.log', shell=True, stdout=sp.PIPE)
+            sp.run(f'echo [{self.sampled_times}] {int(self.t2-self.t1)} {index_conf} {system_conf} {y1} {y2} {y3} >> record.log', shell=True, stdout=sp.PIPE)
 
             Y1.append(y1)
             Y2.append(y2)
