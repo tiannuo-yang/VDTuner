@@ -87,14 +87,14 @@ VDTuner is tested on a server configured with CentOS 7.9.2009 (Linux 5.5.0) and 
 
 ## Citation
 If you use VDTuner in your scientific article, please cite our ICDE 2024 paper:  
-'''
+```
 @inproceedings{yang2024vdtuner,  
      title={VDTuner: Automated Performance Tuning for Vector Data Management Systems},  
      author={Yang, Tiannuo and Hu, Wen and Peng, Wangqi and Li, Yusen and Li, Jianguo and Wang, Gang and Liu, Xiaoguang},  
      booktitle={2024 IEEE 40th International Conference on Data Engineering (ICDE)},  
      year={2024}  
 }
-'''
+```
 
 ## Contributors
 [Tiannuo Yang](https://github.com/tiannuo-yang) <yangtn@nbjl.nankai.edu.cn>  
