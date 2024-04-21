@@ -6,7 +6,8 @@
 
 <!-- # VDTuner: Towards High Search Speed and Recall Rate by Auto-Configuring Vector Data Management System -->
 
-VDTuner is tested on a server configured with CentOS 7.9.2009 (Linux 5.5.0) and Python 3.11. The evaluated Vector Database Management System and benchamark is Mivlus (version 2.3.1) and vector-db-benchmark.
+VDTuner is tested on a server configured with CentOS 7.9.2009 (Linux 5.5.0) and Python 3.11. The evaluated Vector Database Management System and benchamark is Mivlus (version 2.3.1) and vector-db-benchmark.  
+See the preprint at http://arxiv.org/abs/2404.10413
 
 ## Dependencies
 1. Make sure [Milvus (2.3.1 version with docker-compose)](https://milvus.io/docs/install_standalone-docker.md) is deployed on your server.
